@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class BirthdayProblem {
 
     public static void birthdayProblem() {
-        System.out.println("==Birthday problem==");
         System.out.println("Input integer N:");
         Scanner input = new Scanner(System.in);
         int n = 0;
@@ -48,7 +47,7 @@ public class BirthdayProblem {
         for (int i = 0; i <= nValues.size() - 1; i++) {
             int n = nValues.get(i);
             int countBeforeDuplicate = birthdayLogicCount(n);
-            int expectedTries = (int) Math.round(Math.sqrt(Math.PI * n * 2 / 2)); //The hypothesis states ~SQRT(PIE*N/2)
+            int expectedTries = (int) Math.round(Math.sqrt(Math.PI * n / 2)); //The hypothesis states ~SQRT(PIE*N/2)
             double accuracy = (double) countBeforeDuplicate / (double) expectedTries; //The closer to 1.0, the better
             System.out.printf("%10d %15d %29d %25.1f\n",
                     n,
