@@ -25,13 +25,15 @@ public class BirthdayProblem {
 
         while (true) {
             random = StdRandom.uniform(0, n);
+            //If the list doesn't contains the random value, we add it.
             if (!randoms.contains(random)) {
                 randoms.add(random);
                 System.out.println(count + ") " + random);
                 count++;
+                //When the list already contains a value, it's a duplicate. Then we stop the loop.
             } else {
                 System.out.println(count + ") " + random);
-                System.out.println("Duplicate " + random + " found at try number " + count);
+                System.out.println("Duplicate " + random + " found at try number " + count + ".");
                 return;
             }
         }
