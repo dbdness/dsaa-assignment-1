@@ -43,6 +43,7 @@ public class CouponCollectorProblem {
     }
 
     public static void couponCollectorSimulated(List<Integer> nValues) {
+        System.out.println("==Coupon collector problem *SIMULATED*==");
         System.out.printf("%11s %19s %28s %14s\n",
                 "N ",
                 "Amount of numbers before all values",
@@ -58,7 +59,6 @@ public class CouponCollectorProblem {
                     numberOfTries,
                     expectedTries,
                     accuracy);
-
         }
     }
 

@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class BirthdayProblem {
 
     public static void birthdayProblem() {
+        System.out.println("==Birthday problem==");
         System.out.println("Input integer N:");
         Scanner input = new Scanner(System.in);
         int n = 0;
@@ -39,6 +40,7 @@ public class BirthdayProblem {
     }
 
     public static void birthdayProblemSimulated(List<Integer> nValues) {
+        System.out.println("==Birthday problem *SIMULATED*==");
         System.out.printf("%11s %18s %29s %13s\n",
                 "N ",
                 "Duplicate found at try number",
