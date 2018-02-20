@@ -23,14 +23,15 @@ public class Main {
         //CouponCollectorProblem.couponCollectorSimulated(nValues);
 
         Card[] deck = Card.getShuffledDeck();
-        System.out.println("Before sort:");
+
+        System.out.println("Before sort:\n");
         for (Card card : deck) {
             System.out.println(card);
         }
 
         Card.bubbleSortDeck(deck);
 
-        System.out.println("\n\nAfter sort:");
+        System.out.println("\nAfter sort:\n");
         for (Card card : deck) {
             System.out.println(card);
         }

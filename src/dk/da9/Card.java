@@ -98,6 +98,7 @@ public class Card {
             for (int j = 1; j < n; j++) {
                 //If Card 1's suit is higher than Card 2's suit
                 if (deck[j - 1].getSuit().getPriority() > deck[j].getSuit().getPriority()) {
+                    //Flip the order of the two cards
                     temp = deck[j - 1];
                     deck[j - 1] = deck[j];
                     deck[j] = temp;
@@ -106,6 +107,7 @@ public class Card {
                 else if(deck[j-1].getSuit().getPriority() == deck[j].getSuit().getPriority()){
                     //If Card 1's rank is higher than Card 2's rank
                     if (deck[j - 1].getRank().getPriority() > deck[j].getRank().getPriority()) {
+                        //Flip the order of the two cards
                         temp = deck[j - 1];
                         deck[j - 1] = deck[j];
                         deck[j] = temp;
