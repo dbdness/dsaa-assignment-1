@@ -1,10 +1,6 @@
 package dk.da9;
 
-import edu.princeton.cs.algs4.Shell;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -26,29 +22,23 @@ public class Main {
 
         //CouponCollectorProblem.couponCollectorSimulated(nValues);
 
-        /*
-        List<Card> deck = new ArrayList<>();
-        deck.add(new Card(Card.Suit.Hearts, Card.Rank.Two));
-        deck.add(new Card(Card.Suit.Spades, Card.Rank.Ace));
-        deck.add(new Card(Card.Suit.Clubs, Card.Rank.Ten));
-        deck.add(new Card(Card.Suit.Spades, Card.Rank.Two));
-        */
+        Card[] deck = Card.getShuffledDeck();
+        System.out.println("Before sort:");
+        for (Card card : deck) {
+            System.out.println(card);
+        }
 
-        //Comparable[] cards = new Comparable[deck.size()-1];
-        Card[] cards = new Card[4];
+        Card.bubbleSortDeck(deck);
 
-        cards[0] = new Card(Card.Suit.Hearts, Card.Rank.Two);
-        cards[1] = new Card(Card.Suit.Spades, Card.Rank.Ace);
-        cards[2] = new Card(Card.Suit.Clubs, Card.Rank.Ten);
-        cards[3] = new Card(Card.Suit.Spades, Card.Rank.Two);
-
-
-        for(Card card : cards){
+        System.out.println("\n\nAfter sort:");
+        for (Card card : deck) {
             System.out.println(card);
         }
 
 
     }
+
+
 
 
 }
